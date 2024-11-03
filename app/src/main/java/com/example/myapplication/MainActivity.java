@@ -28,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
         textView2 = findViewById(R.id.textView2);
 
     }
-    public void showDetails() {
-        if (etname.getText().toString().isEmpty() || etyear.getText().toString().isEmpty())
+    public void showDetails(android.view.View view) {
+        if (etname.getText().toString().isEmpty() || etyear.getText().toString().isEmpty()) {
             Toast.makeText(this, "please fill in fields....", Toast.LENGTH_SHORT).show();
-        else {
+        } else {
             name = etname.getText().toString();
             year = Integer.parseInt(etyear.getText().toString());
-       int age=2024-year;
-       details="welcome"+name+"your age is:"+age;
-       textView2.setText(details);
-
+            int age = 2024 - year;
+            details = "/b"+"Welcome " + name + ", your age is: " + age;
+            textView2.setText(details);
         }
     }
+
 }

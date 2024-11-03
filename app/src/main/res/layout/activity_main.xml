@@ -22,7 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -30,7 +29,7 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="348dp"
         android:layout_marginEnd="75dp"
-        android:gravity="center"
+        android:gravity="left|bottom"
         android:text="details:"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,9 +45,10 @@
         android:hint="Enter your name"
         android:minHeight="48dp"
         android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="85dp" />
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/etyear"
@@ -58,21 +58,23 @@
         android:hint="Enter your year of born"
         android:minHeight="48dp"
         android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintTop_toBottomOf="@id/etname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="179dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="179dp"
+        android:onClick="showDetails"
         android:text="send"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="282dp"
-        android:onClick="showDetails"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/etyear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
