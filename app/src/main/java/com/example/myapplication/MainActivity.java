@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void showDetails(android.view.View view) {
         if (etname.getText().toString().isEmpty() || etyear.getText().toString().isEmpty()) {
-            Toast.makeText(this, "please fill in fields....", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "please fill in fields quickly....", Toast.LENGTH_SHORT).show();
         } else {
             name = etname.getText().toString();
             year = Integer.parseInt(etyear.getText().toString());
